@@ -9,7 +9,7 @@ import regex as re
 from datetime import datetime, timedelta, date
 import nltk
 import spacy
-import en_core_web_sm
+#import en_core_web_sm
 import locationtagger
 import dateutil.parser
 import os
