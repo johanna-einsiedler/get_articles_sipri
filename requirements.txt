@@ -1,5 +1,4 @@
 beautifulsoup4==4.12.2
-en_core_web_sm==3.5.0
 Flask==2.3.2
 locationtagger==0.0.1
 nltk==3.8.1
