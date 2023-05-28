@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Time Horizon {% endblock %}</h1>
+    <p> Per default, all articles form the last week will be searched.</p>
+    <p> If you would like to extract articles from a different time horizon, please enter a date below and all articles published since then will be included. Please write the date in the following format e.g. May 9, 2023</p>
+    <form method="post">
+        <label for="input_date">Enter Date </label>
+        <br>
+        <input type="text" name="input_date"
+               placeholder="Date"
+               value="{{ request.form['input_date'] }}"></input>
+        <br>
+        <p>{{ ask_again }}</p>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <p>Please enter the email adress where the csv file should be sent to:</p>
+  <form method="post">
+    <label for="email">Email</label>
+    <br>
+    <input type="text" name="email"
+           placeholder=""
+           value="{{ request.form['email'] }}"></input>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <p>  Extracting all articles published since {{date}}</p>
+    <h1>{% block title %} Keywords {% endblock %}</h1>
+<p> I am looking for the following keywords in the text:</p>
+<ul>
+{% for keyword in keywords %}
+    <li>{{ keyword }}</li>
+{% endfor %}
+</ul>
+<p>Do you want to add any other words to this list?</p>
+<p>If so, please enter them separated by a comma (eg. item1, item2). Else leave empty.</p>
+
+<form method="post">
+    <label for="keywords_new">Enter Additional Keywords </label>
+    <br>
+    <input type="text" name="keywords_new"
+           placeholder=""
+           value="{{ request.form['keywords_new'] }}"></input>
+    <br>
+
+    <br>
+    <button type="submit">Next</button>
+    </form>
+
+{% endblock %}

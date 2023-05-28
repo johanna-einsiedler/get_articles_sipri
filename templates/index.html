@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} US Defense Contracts Webscraper {% endblock %}</h1>
+	<p> This is an application to extract relevant information about U.S. Defense Contracts from their homepage. </p>
+    <button onclick="location.href={{url_for('get_date')}}">Get Started</button>
+
+{% endblock %}
